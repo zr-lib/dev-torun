@@ -1,40 +1,3 @@
-# dev-torun
-watch dir and run command, config, callback.
-
-A tool for lib, development then building
-
-[中文](./README-zh.md)
-
-## Install
-
-```bash
-npm i @zr-lib/check-model
-```
-
-## Usage
-
-- add npm scripts
-```json
-{
-  //...
-  "scripts": {
-    "dev-torun": "dev-torun"
-  }
-  //...
-}
-```
-
-- run in terminal
-
-```bash
-npm run dev-torun
-```
-
-## Example
-
-dev-torun.config.js
-
-```js
 require('dev-torun/jsTypes/config.types.js');
 
 /** @type {DevToRunConfig} */
@@ -57,5 +20,3 @@ module.exports = {
     else console.log('\n');
   }
 };
-
-```

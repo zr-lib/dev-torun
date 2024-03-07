@@ -1,0 +1,40 @@
+{
+  "name": "dev-torun",
+  "version": "1.0.0",
+  "description": "watch dir and run command, config, callback.",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">= 12"
+  },
+  "bin": {
+    "dev-torun": "./bin/dev-torun.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node bin/dev-torun.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zr-lib/dev-torun.git"
+  },
+  "keywords": [
+    "development",
+    "lib building",
+    "yalc",
+    "auto yalc"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zr-lib/dev-torun/issues"
+  },
+  "homepage": "https://github.com/zr-lib/dev-torun#readme",
+  "dependencies": {
+    "chokidar": "^3.6.0"
+  }
+}
