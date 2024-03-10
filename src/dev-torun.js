@@ -1,4 +1,4 @@
-const { spawn } = require('child_process');
+const { execSync } = require('child_process');
 const { config, listenStr } = require('./config-tool.js');
 const readline = require('readline');
 
@@ -17,24 +17,16 @@ function startCountDown(startCount, cb = () => {}) {
 
 let isTaskRunning = false;
 /** 执行任务 */
-function runTask(cmdStr = '') {
-  console.log(`\n\n✨ ====Running: [${cmdStr}]==== ✨\n`);
+function runTask(command = '') {
+  console.log(`\n\n🌟=====Running:[${command}]=====🌟\n`);
   isTaskRunning = true;
-  const [command, ...args] = cmdStr.split(' ');
-  const taskSp = spawn(command, args, { stdio: 'inherit', cwd: process.cwd() });
-  taskSp.on('close', (e) => {
-    isTaskRunning = false;
-    console.log(`\n✅ Done. ${new Date().toLocaleString()}\n`);
-    if (config.task_done) config.task_done();
+  const taskError = execSync(command, { stdio: 'inherit' });
+  if (taskError) throw taskError;
+  isTaskRunning = false;
 
-    setTimeout(() => console.log(listenStr), 1000);
-    if (hasNextTask) handleTask();
-  });
-  taskSp.on('error', (e) => {
-    isTaskRunning = false;
-    console.warn(1, e.toString());
-    process.exit(1);
-  });
+  if (config.task_done) config.task_done();
+  console.log(listenStr);
+  if (hasNextTask) handleTask();
 }
 
 let hasNextTask = false;

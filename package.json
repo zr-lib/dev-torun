@@ -1,11 +1,11 @@
 {
   "name": "dev-torun",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "watch dir and run command, config, callback.",
   "main": "src/index.js",
   "type": "commonjs",
   "engines": {
-    "node": ">= 12"
+    "node": ">= 14"
   },
   "bin": {
     "dev-torun": "./bin/dev-torun.js"
