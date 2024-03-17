@@ -3,7 +3,7 @@ watch dir and run command, config, callback.
 
 A tool for lib, development then building
 
-[中文](./README-zh.md)
+English | [中文](./README-zh.md)
 
 ## Install
 
