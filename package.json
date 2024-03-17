@@ -1,6 +1,6 @@
 {
   "name": "@zr-lib/dev-torun",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "watch dir and run command, config, callback.",
   "main": "src/index.js",
   "type": "commonjs",
