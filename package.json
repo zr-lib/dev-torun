@@ -1,5 +1,5 @@
 {
-  "name": "dev-torun",
+  "name": "@zr-lib/dev-torun",
   "version": "1.0.1",
   "description": "watch dir and run command, config, callback.",
   "main": "src/index.js",
