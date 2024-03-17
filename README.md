@@ -8,7 +8,7 @@ English | [中文](./README-zh.md)
 ## Install
 
 ```bash
-npm i @zr-lib/check-model
+npm i @zr-lib/dev-torun
 ```
 
 ## Usage
