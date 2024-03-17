@@ -1,4 +1,4 @@
-require('dev-torun/jsTypes/config.types.js');
+require('@zr-lib/dev-torun/jsTypes/config.types.js');
 
 const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 

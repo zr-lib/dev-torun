@@ -32,7 +32,7 @@ npm i @zr-lib/dev-torun
 
 - 在项目根目录新建 `dev-torun.config.js`
 ```javascript
-require('dev-torun/jsTypes/config.types.js');
+require('@zr-lib/dev-torun/jsTypes/config.types.js');
 
 const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
