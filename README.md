@@ -5,6 +5,16 @@ A tool for lib, development then building
 
 English | [中文](./README-zh.md)
 
+
+Config
+- `config.listen_dir`: Listen for directory changes
+- `config.task_delay`: Delay time (in seconds) to execute the task; Terminal output countdown
+- `config.task_cmd`: Execute task; After modifying and saving `config.listen_dir`
+  - There is currently a task being executed: wait until the execution is successful, then countdown again and execute the task
+  - There are currently no tasks to execute: start the countdown and then execute the task
+- `config.task_done`: `config.task_cmd` callback function executed successfully
+
+
 ## Install
 
 ```bash

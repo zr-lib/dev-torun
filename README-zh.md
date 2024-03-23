@@ -1,14 +1,13 @@
 # dev-torun
 node.js监听目录变化，延时执行命令
 
-说明
-
-- 监听目录`config.listen_dir`变化
-- 延迟时间`config.task_delay`(秒)执行任务；倒计时`config.task_delay`，终端输出打印
-- 任意修改，
-   - 当前有任务在执行：等到执行成功后，再次倒计时后执行任务`config.task_cmd`
-   - 当前没有任务执行：重新开始计时`config.task_delay`(秒)延迟执行任务`config.task_cmd`
-- 构建成功的回调，`config.task_done`函数
+配置说明
+- `config.listen_dir`：监听目录变化
+- `config.task_delay`：延迟时间(秒)执行任务；终端输出倒计时
+- `config.task_cmd`：执行任务；当`config.listen_dir`修改保存后：
+  - 当前有任务在执行：等到执行成功后，再次倒计时后执行任务
+  - 当前没有任务执行：开始倒计时，然后执行任务
+- `config.task_done`：`config.task_cmd`执行成功的回调函数
 
 使用场景
 
