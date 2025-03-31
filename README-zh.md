@@ -143,16 +143,17 @@ function handleTask() {
 ```
 
 ### 配置类型 DevToRunConfig
-`jsDoc`类型，直接`require('dev-torun/jsTypes/config.types.js');`即可，查看下面 `dev-torun.config.js`使用方式
+在 `src/types/index.d.ts`
 
-在 `src/jsTypes/config.types.js`
-
-```javascript
-/**
- * @typedef {object} DevToRunConfig
- * @property {string} listen_dir 监听目录(listen directory)
- * @property {number} task_delay 任务延迟/秒(task delay/seconds)
- * @property {string} task_cmd 执行的命令`bash`，支持`&&`串行 (bash command, support `&&`)
- * @property {Function} task_done `task_cmd`执行成功之后的回调(callback after `task_cmd` successed)
- */
+```typescript
+export type DevToRunConfig = {
+	/** 监听目录(listen directory) */
+	listen_dir: string;
+	/** 任务延迟/秒(task delay/seconds) */
+	task_delay: number;
+	/** 执行的命令`bash`，支持`&&`串行 (bash command, support `&&`) */
+	task_cmd: string;
+	/** `task_cmd`执行成功之后的回调(callback after `task_cmd` successed) */
+	task_done: () => void;
+}
 ```
