@@ -43,11 +43,9 @@ npm run dev-torun
 dev-torun.config.js
 
 ```js
-require('@zr-lib/dev-torun/jsTypes/config.types.js');
-
 const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
-/** @type {DevToRunConfig} */
+/** @type {import('@zr-lib/dev-torun/types').DevToRunConfig} */
 module.exports = {
   listen_dir: './src/',
   task_delay: 5,

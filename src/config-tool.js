@@ -1,6 +1,5 @@
 const path = require('path');
 const fs = require('fs');
-require('../jsTypes/config.types');
 
 const configFilePath = path.resolve(process.cwd() + '/dev-torun.config.js');
 
@@ -14,7 +13,7 @@ if (!fs.existsSync(configFilePath)) {
   process.exit(1);
 }
 
-/** @type {DevToRunConfig} */
+/** @type {import('../types').DevToRunConfig} */
 const config = {
   listen_dir: '',
   task_delay: 10,

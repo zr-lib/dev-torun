@@ -31,11 +31,9 @@ npm i @zr-lib/dev-torun
 
 - 在项目根目录新建 `dev-torun.config.js`
 ```javascript
-require('@zr-lib/dev-torun/jsTypes/config.types.js');
-
 const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
-/** @type {DevToRunConfig} */
+/** @type {import('@zr-lib/dev-torun/types').DevToRunConfig} */
 module.exports = {
   listen_dir: './src/',
   task_delay: 5,

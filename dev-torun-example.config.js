@@ -1,8 +1,6 @@
-require('@zr-lib/dev-torun/jsTypes/config.types.js');
-
 const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
-/** @type {DevToRunConfig} */
+/** @type {import('./types').DevToRunConfig} */
 module.exports = {
   listen_dir: './src/',
   task_delay: 5,
